@@ -12,6 +12,14 @@ module.exports = {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist")
     },
+    resolve: {
+        alias: {
+            '@':path.resolve(__dirname, 'src'),
+            '@css':path.resolve(__dirname, 'src/assets/css'),
+            '@fonts':path.resolve(__dirname, 'src/assets/fonts'),
+            '@scripts':path.resolve(__dirname, 'src/assets/scripts')
+        }
+    },
     plugins: [
         new HTMLWebpackPlugin({
             template: "./index.html"
@@ -23,8 +31,11 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
+            },
+            {
+                test: /\.(ttf|woff|woff2|eot)$/,
+                use: ["file-loader"]
             }
-
         ]
     }
 };
