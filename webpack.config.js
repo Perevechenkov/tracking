@@ -5,27 +5,9 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const OptimizeCssAssetsWebpackPlugin = require("optimize-css-assets-webpack-plugin");
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
-
-const optimization = () => {
-    const config = {
-        splitChunks: {
-            chunks: "all"
-        }
-    }
-
-    if (isProd) {
-        config.minimizer = [
-            new OptimizeCssAssetsWebpackPlugin({
-                cssProcessorOptions: { discardComments: { removeAll: true } },
-                canPrint: true
-            }),
-        ]
-    }
-}
 
 module.exports = {
     devtool: isDev ? "eval-heap-source-map" : "eval-source-map",
