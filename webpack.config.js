@@ -1,13 +1,15 @@
 const path = require("path");
 const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const OptimizeCssAssetsWebpackPlugin = require("optimize-css-assets-webpack-plugin");
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
+
+const filename = ext => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 
 module.exports = {
     devtool: isDev ? "eval-heap-source-map" : "eval-source-map",
@@ -17,7 +19,7 @@ module.exports = {
         hamburger: "./assets/scripts/index.js"
     },
     output: {
-        filename: "[name].bundle.js",
+        filename: filename("js"),
         path: path.resolve(__dirname, "dist")
     },
     resolve: {
@@ -42,11 +44,15 @@ module.exports = {
                 }
             }),
             new OptimizeCssAssetsWebpackPlugin({
-                cssProcessorOptions: { discardComments: { removeAll: true } },
+                cssProcessorOptions: {discardComments: {removeAll: true}},
                 canPrint: true,
                 sourceMap: true
             }),
         ]
+    },
+    devServer: {
+        port: 4000,
+        hot: isDev
     },
     plugins: [
         new HTMLWebpackPlugin({
@@ -57,7 +63,7 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: "[name].css",
+            filename: filename('css'),
         }),
         new webpack.SourceMapDevToolPlugin({})
     ],
@@ -69,7 +75,7 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            sourceMap:true,
+                            sourceMap: true,
                             hmr: isDev,
                             reloadAll: isDev,
                         },
@@ -77,16 +83,21 @@ module.exports = {
                     'css-loader',
                 ],
             },
-            /*{
-                test: /\.sass$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        'css-loader',
-                        'sass-loader'
-                    ]
-                })
-            },*/
+            {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            sourceMap: true,
+                            hmr: isDev,
+                            reloadAll: isDev,
+                        },
+                    },
+                    'css-loader',
+                    'sass-loader'
+                ],
+            },
             /*{
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
@@ -95,6 +106,10 @@ module.exports = {
                 test: /\.(ttf|woff|woff2|eot)$/,
                 use: ["file-loader"]
             },
+            {
+                test: /\.(png|jpg|jpeg|svg)$/,
+                use: ["file-loader"]
+            }
         ]
     }
 };

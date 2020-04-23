@@ -1,9 +1,7 @@
-import "@css/style.css"
+import "@scss/style.scss"
 
 (() => {
     let hamburger = document.querySelector(".hamburger");
-
-    ahmm - 1
 
     changeStatus(hamburger);
 
