@@ -3,6 +3,8 @@ import "@css/style.css"
 (() => {
     let hamburger = document.querySelector(".hamburger");
 
+    ahmm - 1
+
     changeStatus(hamburger);
 
     function changeStatus(node) {

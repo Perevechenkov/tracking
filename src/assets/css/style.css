@@ -1,6 +1,10 @@
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("~@fonts/Roboto-Regular.ttf") format("truetype"); }
+
 body {
   font-family: "Roboto Regular", sans-serif;
-  font-size: 50px; }
+  font-size: 10px; }
 
 * {
   box-sizing: border-box; }
@@ -70,5 +74,3 @@ body {
     .hamburger.animate__X.is-active span::after {
       bottom: 0;
       transform: rotate(-45deg); }
-
-/*# sourceMappingURL=style.css.map */
