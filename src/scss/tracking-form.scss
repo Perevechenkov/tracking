@@ -3,22 +3,6 @@
 @import "_general";
 @import "_common";
 
-header {
-  top: 0;
-  height: 200px;
-  position: fixed;
-  border-bottom: 1px solid grey;
-}
-
-main {
-  margin-top: 200px;
-}
-
-aside {
-  width: 21.1%;
-  border-right: 1px solid $border;
-}
-
 .faq-wrap {
   box-sizing: border-box;
   display: flex;
@@ -45,48 +29,48 @@ aside {
     background-color: $generalBg;
     border: 1px solid $border;
   }
-}
 
-.tracking-form-box {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 20px 0;
+  .tracking-form-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+  
+    color: #828282;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    background-color: transparent;
+  
+    border: none;
 
-  color: #828282;
-  font-family: "Open Sans";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 24px;
-  text-transform: uppercase;
-  background-color: transparent;
+    .tracking__input {
+      display: flex;
+      background-color: transparent;
 
-  border: none;
-}
-
-.tracking__input {
-  display: flex;
-  background-color: transparent;
-}
-
-input[type="text"] {
-  flex-grow: 1;
-  margin-right: 20px;
-
-  outline: 0;
-  height: 50px;
-  padding: 18px 20px 19px;
-  border-radius: 0;
-  border: 1px solid $border;
-
-  color: #828282;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  text-transform: uppercase;
-}
-
-input[type="button"] {
-  @extend %yellow-form-button;
+      input[type="text"] {
+        flex-grow: 1;
+        margin-right: 20px;
+      
+        outline: 0;
+        height: 50px;
+        padding: 18px 20px 19px;
+        border-radius: 0;
+        border: 1px solid $border;
+      
+        color: #828282;
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-transform: uppercase;
+      }
+      
+      input[type="button"] {
+        @extend %yellow-form-button;
+      }
+    }
+  }
 }

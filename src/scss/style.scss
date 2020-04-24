@@ -9,14 +9,16 @@ header {
   top: 0;
   height: 200px;
   position: fixed;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid $border;
 }
 
 main {
   margin-top: 200px;
+  
+  aside {
+    width: 21.1%;
+    border-right: none;
+  }
+
 }
 
-aside {
-  width: 21.1%;
-  border-right: 1px solid grey;
-}

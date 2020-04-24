@@ -1,7 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
-const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const OptimizeCssAssetsWebpackPlugin = require("optimize-css-assets-webpack-plugin");
@@ -11,7 +11,7 @@ const isProd = !isDev;
 
 const filename = ext => {
     let hook = '';
-    if(ext === 'js' || ext === 'css')
+    if (ext === 'js' || ext === 'css')
         hook = '?=';
     return isDev ? `[name].${ext}` : `[name].${ext}${hook}[contenthash]`
 };
@@ -21,7 +21,7 @@ module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
     entry: {
-        hamburger: "./assets/scripts/index.js"
+        main: "./assets/scripts/index.js"
     },
     output: {
         filename: filename("js"),
@@ -33,7 +33,8 @@ module.exports = {
             '@css': path.resolve(__dirname, 'src/assets/css'),
             '@fonts': path.resolve(__dirname, 'src/assets/fonts'),
             '@scripts': path.resolve(__dirname, 'src/assets/scripts'),
-            '@scss': path.resolve(__dirname, 'src/scss')
+            '@scss': path.resolve(__dirname, 'src/scss'),
+            '@images': path.resolve(__dirname, 'src/assets/images')
         }
     },
     optimization: {
@@ -49,7 +50,7 @@ module.exports = {
                 }
             }),
             new OptimizeCssAssetsWebpackPlugin({
-                cssProcessorOptions: {discardComments: {removeAll: true}},
+                cssProcessorOptions: { discardComments: { removeAll: true } },
                 canPrint: true,
                 sourceMap: true
             }),
@@ -72,20 +73,6 @@ module.exports = {
     ],
     module: {
         rules: [
-            {
-                test: /\.css$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            sourceMap: true,
-                            hmr: isDev,
-                            reloadAll: isDev,
-                        },
-                    },
-                    'css-loader',
-                ],
-            },
             {
                 test: /\.scss$/,
                 use: [

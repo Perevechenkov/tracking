@@ -3,19 +3,66 @@
 @import "_general";
 @import "_common";
 
-.--tracking-info{
-    height: 500px;  
+.--tracking-info {
+    height: 500px;
     border-bottom: 1px solid $border;
 
+    .general__info {
+        padding: 29px 10px 40px 23px;
+        border-bottom: 1px solid $border;
 
-}
+        &:first-child {
+            border-top: none;
+        }
 
-.general__info{
-    &:first-child{
-        border-top: none;
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .client__info {
+            display: block;
+            text-align: left;
+
+            font-size: 22px;
+            font-weight: 400;
+
+            margin: 0 auto 31px 0;
+
+            .full__name {
+                margin-bottom: 5px;
+            }
+        }
+
+        .delivery__info {
+            box-sizing: border-box;
+            display: flex;
+            width: 100%;
+            margin-top: 21px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .img__wrap {
+            box-sizing: border-box;
+            width: 100px;
+            margin-right: 10px;
+
+            width: 31px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .delivery__info__extended {
+            p{
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
     }
 
-    &:last-child{
-        border-bottom: none;
+    data {
+        text-transform: uppercase;
     }
 }
