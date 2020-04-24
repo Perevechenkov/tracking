@@ -1,0 +1,21 @@
+@import "fonts";
+@import "_variables";
+@import "_general";
+@import "_common";
+
+.--tracking-info{
+    height: 500px;  
+    border-bottom: 1px solid $border;
+
+
+}
+
+.general__info{
+    &:first-child{
+        border-top: none;
+    }
+
+    &:last-child{
+        border-bottom: none;
+    }
+}

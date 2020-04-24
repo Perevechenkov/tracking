@@ -2,4 +2,21 @@
 @import "_variables";
 @import "_general";
 @import "_common";
+@import "tracking-form";
+@import "tracking-info";
 
+header {
+  top: 0;
+  height: 200px;
+  position: fixed;
+  border-bottom: 1px solid grey;
+}
+
+main {
+  margin-top: 200px;
+}
+
+aside {
+  width: 21.1%;
+  border-right: 1px solid grey;
+}
