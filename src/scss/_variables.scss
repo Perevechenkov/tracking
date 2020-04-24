@@ -1,0 +1,72 @@
+$iphoneXpadding: 10px;
+// Left Menu width
+$paddingLeftTablet: 24%;
+$paddingLeftPc: 16%;
+$widthLeftTablet: calc(100% - 24%);
+$widthLeftPc: calc(100% - 16%);
+// Size
+$mobile: 375px;
+$mobile-max: 374px;
+$large-mobile: 450px;
+$large-mobile-max: 449px;
+$tablet: 1024px;
+$tablet-max: 1023px;
+$pc: 1400px;
+$pc-max: 1399px;
+$pc-wide: 1800px;
+$pc-wide-max: 1799px;
+$pc-4k: 2400px;
+$pc4k-max: 2399px;
+// Width 1 to 12 blocks
+$w1: 8.33333%;
+$w2: 16.66667%;
+$w3: 25%;
+$w4: 33.33333%;
+$w5: 41.66667%;
+$w6: 50%;
+$w7: 58.33333%;
+$w8: 66.66667%;
+$w9: 75%;
+$w10: 83.33333%;
+$w11: 91.66667%;
+$w12: 100%;
+// General
+$generalColor: rgba(96%, 92%, 2%, 1);
+$generalBg: rgba(100%, 100%, 100%, 1);
+$generalHover: rgba(11%, 53%, 93%, 1);
+$border: rgba(85%, 85%, 85%, 1);
+$notActive: rgba(50%, 50%, 50%, 1);
+$active: rgba(0%, 0%, 0%, 1);
+$shadowColor: rgba(0%, 0%, 0%, .16);
+$footerBg: rgba(93%, 92%, 89%, 1);
+$cartTable: rgba(67%, 67%, 67%, 1);
+
+// Color
+$headerBg: rgba(0%, 0%, 0%, 1);
+$mainBg: rgba(95%, 95%, 95%, 1);
+$subMenuBg: rgba(95%, 95%, 95%, 1);
+$navMobileMenu: rgba(50%, 50%, 50%, 1);
+$navMobileMenuHover: rgba(100%, 100%, 100%, 1);
+$menuMobileBg: rgba(100%, 100%, 100%, 1);
+$menuColor: rgba(0%, 0%, 0%, 1);
+$menuSubColor: rgba(49%, 49%, 47%, 1);
+$asideMenuColor: rgba(20%, 20%, 20%, 1);
+$asideMenuBgSub: rgba(93%, 91%, 88%, 1);
+$asideMenuColorSub: rgba(58%, 57%, 55%, 1);
+$subscribeBg: rgba(40%, 41%, 43%, 1);
+$categoryMenuBg: rgba(40%, 41%, 43%, 1);
+$categoryMenuBlockBg: rgba(52%, 53%, 54%, 1);
+$breadcrumbShop: rgba(100%, 100%, 100%, 1);
+$breadcrumbLinkShop: rgba(75%, 75%, 75%, 1);
+$breadcrumb: rgba(0%, 0%, 0%, 1);
+$breadcrumbLink: rgba(50%, 50%, 50%, 1);
+$selectColor: rgba(20%, 20%, 20%, 1);
+$priceGrey: rgba(75%, 75%, 75%, 1);
+$filterBg-1: rgba(97%, 97%, 97%, 1);
+$filterBg-2: rgba(100%, 100%, 100%, 1);
+$disabledFilter: rgba(92%, 90%, 90%, 1);
+$tableOdd: rgba(95%, 95%, 95%, 1);
+$disabledButton: rgba(87%, 87%, 87%, 1);
+// Global Message
+$messageBg: rgba(34%, 54%, 95%, .7);
+$errorMessageBg: rgba(96%, 52%, 44%, .7);
