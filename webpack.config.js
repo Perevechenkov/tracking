@@ -62,9 +62,7 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             template: "./index.html",
-            /*minify: {
-                collapseWhitespace: isProd
-            }*/
+            minify: false
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
@@ -103,10 +101,6 @@ module.exports = {
                     'sass-loader'
                 ],
             },
-            /*{
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"]
-            },*/
             {
                 test: /\.(ttf|woff|woff2|eot)$/,
                 use: ["file-loader"]
