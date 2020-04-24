@@ -9,10 +9,15 @@ const OptimizeCssAssetsWebpackPlugin = require("optimize-css-assets-webpack-plug
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
-const filename = ext => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+const filename = ext => {
+    let hook = '';
+    if(ext === 'js' || ext === 'css')
+        hook = '?=';
+    return isDev ? `[name].${ext}` : `[name].${ext}${hook}[contenthash]`
+};
 
 module.exports = {
-    devtool: isDev ? "eval-heap-source-map" : "eval-source-map",
+    devtool: isDev ? "eval-cheap-source-map" : "eval-source-map",
     context: path.resolve(__dirname, "src"),
     mode: "development",
     entry: {
@@ -57,9 +62,9 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             template: "./index.html",
-            minify: {
+            /*minify: {
                 collapseWhitespace: isProd
-            }
+            }*/
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
