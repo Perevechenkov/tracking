@@ -3,6 +3,8 @@
 @import "_general";
 @import "_common";
 
+//ПОПРАВИТЬ ЦВЕТ ШРИФТА
+
 .--tracking-info {
     border-bottom: 1px solid $border;
 
@@ -165,8 +167,19 @@
 
                 .item__info {
                     display: flex;
-                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
                     margin-left: 15px;
+
+                    a{
+                        margin: 0;
+                        height: min-content;
+                        color: $generalHover;
+                    }
+
+                    .text_with__date{
+                        color: $breadcrumbLinkShop;
+                    }
                 }
             }
 
@@ -201,8 +214,19 @@
 
             .item__info {
                 display: flex;
-                align-items: center;
+                flex-direction: column;
+                justify-content: center;
                 margin-left: 15px;
+
+                a{
+                    margin: 0;
+                    height: min-content;
+                    color: $generalHover;
+                }
+
+                .text_with__date{
+                    color: $breadcrumbLinkShop;
+                }
             }
         }
 
