@@ -58,7 +58,7 @@ module.exports = {
     },
     devServer: {
         port: 4000,
-        hot: isDev
+        hot: isDev,
     },
     plugins: [
         new HTMLWebpackPlugin({
@@ -94,7 +94,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|jpeg|svg)$/,
-                use: ["file-loader"]
+                use: ["file-loader?name=./images/[name].[ext]"]
             }
         ]
     }

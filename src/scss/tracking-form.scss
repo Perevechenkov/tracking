@@ -3,32 +3,7 @@
 @import "_general";
 @import "_common";
 
-.faq-wrap {
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  padding: 0 20px 10px;
-  @media (max-width: $large-mobile-max) {
-    padding-left: unquote("max(#{20px}, env(safe-area-inset-left))");
-    padding-right: unquote("max(#{20px}, env(safe-area-inset-right))");
-  }
-  h1 {
-    width: 100%;
-    font-size: 1.6em;
-    text-transform: uppercase;
-  }
-  * {
-    box-sizing: border-box;
-  }
-  .content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 20px 0;
-    background-color: $generalBg;
-    border: 1px solid $border;
-  }
+.--faq-wrap {
 
   .tracking-form-box {
     display: flex;
@@ -68,7 +43,7 @@
         text-transform: uppercase;
       }
       
-      input[type="button"] {
+      button{
         @extend %yellow-form-button;
       }
     }
