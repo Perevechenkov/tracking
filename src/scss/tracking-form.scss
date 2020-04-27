@@ -3,7 +3,7 @@
 @import "_general";
 @import "_common";
 
-.faq-wrap {
+.faq-wrap {t pull -u
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
@@ -35,7 +35,7 @@
     flex-direction: column;
     width: 100%;
     margin: 20px 0;
-  
+
     color: #828282;
     font-family: "Open Sans";
     font-size: 24px;
@@ -43,7 +43,7 @@
     line-height: 24px;
     text-transform: uppercase;
     background-color: transparent;
-  
+
     border: none;
 
     .tracking__input {
@@ -53,13 +53,13 @@
       input[type="text"] {
         flex-grow: 1;
         margin-right: 20px;
-      
+
         outline: 0;
         height: 50px;
         padding: 18px 20px 19px;
         border-radius: 0;
         border: 1px solid $border;
-      
+
         color: #828282;
         font-family: "Open Sans", sans-serif;
         font-size: 16px;
@@ -67,7 +67,7 @@
         line-height: 24px;
         text-transform: uppercase;
       }
-      
+
       input[type="button"] {
         @extend %yellow-form-button;
       }
