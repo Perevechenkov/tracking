@@ -14,7 +14,7 @@ body {
 	overflow-y: scroll;
 	&::after {
 		display:none;
-		content: url('/svg/bookmark_hover.svg');
+		//content: url('/svg/bookmark_hover.svg');
 	}
 }
 ul, li, a, p, main, h1, h2, h3 {
@@ -85,7 +85,7 @@ select {
 	-webkit-appearance: none;
 	appearance: none;
 	padding: 6px 10px;
-	background: url('/svg/select.svg') no-repeat right;
+	//background: url('/svg/select.svg') no-repeat right;
 	border: 0;
 	border-radius: 0;
 	background-origin: content-box;

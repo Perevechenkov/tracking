@@ -7,13 +7,11 @@
 </head>
 
 <header>
-
 </header>
 
 <body>
     <main>
         <aside>
-
         </aside>
 
         <div class="content">
@@ -38,12 +36,12 @@
                 </div>
             </div>
 
-            <div class="faq-wrap">
+            <div class="content-wrap --faq-wrap">
                 <h1>Частые вопросы</h1>
                 <div class="tracking-form-box">
-                    <form class="tracking__input" method="get" action="/">
+                    <form class="tracking__input" method="GET" action="#">
                         <input type="text" name="track" autocomplete="on" placeholder="CAA83A85EB9258" />
-                        <input type="button" value="Отследить" />
+                        <button type="submit">Отследить</button>
                     </form>
                 </div>
 
@@ -59,7 +57,7 @@
                         </div>
                         <div class="delivery__info">
                             <div class="img__wrap">
-                                <img id="info-logo">
+                                <img src="/images/info-01.svg">
                             </div>
                             <div class="delivery__info__extended ">
                                 <p>В пути</p>
@@ -71,13 +69,101 @@
                         </div>
                     </div>
                     <div class="route__info --transport-delivery">
+                        <div class="route__number">Маршрут №1</div>
+                        <div class="delivery__type">Доставка транспортной компанией (Деловые линии)</div>
+                        <div class="from-to-blocks">
+                            <div class="from__to">
+                                <div class="head">
+                                    <div class="img__wrap">
+                                        <img src="/images/map-01.svg">
+                                    </div>
+                                    <div class="head__title">Откуда:</div>
+                                </div>
+                                <p class="address">г. Москва, ул. Автомоторная, 4 А корп. 3</p>
+                            </div>
+                            <div class="from__to">
+                                <div class="head">
+                                    <div class="img__wrap">
+                                        <img src="/images/map-01.svg">
+                                    </div>
+                                    <div class="head__title">Куда:</div>
+                                </div>
+                                <p class="address">г. Екатеринбург, Малышева, 164</p>
+                            </div>
+                        </div>
                         <div class="status__info">
-
+                            <div>Статус</div>
+                            <div class="status__block">
+                                <div class="item">
+                                    <div class="status-icon__wrap">
+                                        <img src="/images/active-01.svg" class="stat__icon">
+                                    </div>
+                                    <div class="item__info">
+                                        Обработан
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="status-icon__wrap">
+                                        <img src="/images/noactive-01.svg" class="stat__icon">
+                                    </div>
+                                    <div class="item__info">
+                                        <div>Изготавливается</div>
+                                        <div class="text_with__date">Дата отправки: 17-03-2020</div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="status-icon__wrap">
+                                        <img src="/images/noactive-01.svg" class="stat__icon">
+                                    </div>
+                                    <div class="item__info">
+                                        <div>Ожидает номер ТК</div>
+                                        <div>Трек-номер: 20-123466578</div>
+                                        <a href="#">Посмотреть статус доставки на сайте деловых линий</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="status-icon__wrap">
+                                        <img src="/images/noactive-01.svg" class="stat__icon">
+                                    </div>
+                                    <div class="item__info">
+                                        <div>В пути</div>
+                                        <div class="text_with__date">Приблизительная дата доставки: 20-03-20</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="route__info --pickup">
+                        <div class="route__number">Маршрут №2</div>
+                        <div class="delivery__type">Самовывоз</div>
+                        <div class="from-to-blocks">
+                            <div class="from__to">
+                                <div class="head">
+                                    <div class="img__wrap">
+                                        <img src="/images/map-01.svg">
+                                    </div>
+                                    <div class="head__title">Откуда:</div>
+                                </div>
+                                <p class="address">г. Екатеринбург, Малышева, 164</p>
+                            </div>
+                        </div>
                         <div class="status__info">
-
+                            <div>Статус</div>
+                            <div class="pickup__status__info">
+                                <div class="status-icon__wrap">
+                                    <img src="/images/noactive-01.svg" class="stat__icon">
+                                </div>
+                                <div class="item__info">
+                                    <div>В пути</div>
+                                    <div class="text_with__date">Приблизительная дата доставки: 20-03-20</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="extended__status__block">
+                            <h1>Товар в пути / изготавливается</h1>
+                            <p>
+                                Остались вопросы - свяэитесь с нашим мнеджером по телефону: <b>+7 (343) 228-18-62</b>
+                            </p>
                         </div>
                     </div>
                 </div>
