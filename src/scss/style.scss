@@ -4,6 +4,8 @@
 @import "_common";
 @import "tracking-form";
 @import "tracking-info";
+@import "tracking-form-media";
+@import "tracking-info-media";
 
 header {
   top: 0;
@@ -11,14 +13,22 @@ header {
   height: 200px;
   position: fixed;
   border-bottom: 1px solid $border;
+
+  @media (max-width: $large-mobile-max) {
+    position: unset;
+  }
 }
 
 main {
   margin-top: 200px;
-  
+
   aside {
     width: 21.1%;
     border-right: none;
+  }
+
+  @media (max-width: $large-mobile-max) {
+    margin: 0;
   }
 
 }

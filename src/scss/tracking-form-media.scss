@@ -1,0 +1,36 @@
+@import "_variables";
+
+.content-wrap {
+  @media (max-width: $large-mobile-max) {
+    padding: 0;
+  }
+
+  .mobile-padding {
+    @media (max-width: $large-mobile-max) {
+      width: 100%;
+      padding: 20px;
+    }
+
+    .tracking-form-box {
+      .tracking__input {
+        @media (max-width: $large-mobile-max) {
+          flex-direction: column;
+        }
+
+        input {
+          @media (max-width: $large-mobile-max) {
+            margin: 0;
+          }
+        }
+
+        button {
+          @media (max-width: $large-mobile-max) {
+            margin-top: 12px;
+            width: 100%;
+          }
+        }
+
+      }
+    }
+  }
+}

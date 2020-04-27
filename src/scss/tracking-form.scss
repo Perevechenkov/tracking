@@ -1,50 +1,48 @@
-@import "fonts";
-@import "_variables";
-@import "_general";
-@import "_common";
-
 .--faq-wrap {
-
-  .tracking-form-box {
-    display: flex;
-    flex-direction: column;
+  .mobile-padding {
     width: 100%;
-    margin: 20px 0;
-
-    color: #828282;
-    font-family: "Open Sans";
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 24px;
-    text-transform: uppercase;
-    background-color: transparent;
-
-    border: none;
-
-    .tracking__input {
+    .tracking-form-box {
       display: flex;
+
+      width: 100%;
+      margin: 20px 0 0;
+
+      color: #828282;
+      font-family: "Open Sans";
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase;
       background-color: transparent;
 
-      input {
-        flex-grow: 1;
-        margin-right: 20px;
+      border: none;
 
-        outline: 0;
-        height: 50px;
-        padding: 18px 20px 19px;
-        border-radius: 0;
-        border: 1px solid $border;
+      .tracking__input {
+        display: flex;
+        width: 100%;
+        background-color: transparent;
 
-        color: #828282;
-        font-family: "Open Sans", sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        text-transform: uppercase;
-      }
+        input {
+          flex-grow: 1;
+          margin-right: 20px;
 
-      button {
-        @extend %yellow-form-button;
+          outline: 0;
+          height: 50px;
+          padding: 18px 20px 19px;
+          border-radius: 0;
+          border: 1px solid $border;
+
+          color: #828282;
+          font-family: "Open Sans", sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-transform: uppercase;
+        }
+
+        button {
+          @extend %yellow-form-button;
+        }
       }
     }
   }

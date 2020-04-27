@@ -1,18 +1,10 @@
-@import "fonts";
 @import "_variables";
-@import "_general";
-@import "_common";
-
-//ПОПРАВИТЬ ЦВЕТ ШРИФТА
-
 .--tracking-info {
     border-bottom: 1px solid $border;
 
     .img__wrap {
         box-sizing: border-box;
-        width: 100px;
         margin-right: 10px;
-
         width: 31px;
 
         img {
@@ -119,7 +111,7 @@
             flex-direction: column;
             position: relative;
 
-            margin-top: 20px;
+            margin: 20px 0;
 
             .item {
                 display: flex;
@@ -191,15 +183,15 @@
                 margin-left: 14px;
 
                 z-index: 1;
-            }  
-            
+            }
+
         }
 
         .pickup__status__info{
             display: flex;
             flex-direction: row;
 
-            margin-top: 20px;
+            margin: 20px 0;
 
             .status-icon__wrap {
                 box-sizing: border-box;
@@ -231,22 +223,27 @@
         }
 
         .extended__status__block{
-            margin-top: 25px;
+            margin-top: 35px;
             padding: 35px 10px;
-            background-color: $border;
+            background-color: #e5e5e5;
 
-            h1{        
-                font-size: 1.3em;
+            h1{
+                font-size: 1.4em;
                 font-weight: 300;
                 text-align: center;
-                color: $subscribeBg; 
+                color: #8f8f8f;
             }
 
             p{
-                width: 400px;
+                font-size: 18px;
+                width: 450px;
                 margin: 15px auto 0;
                 text-align: center;
-                color: $subscribeBg;              
+                color: #8f8f8f;
+
+                b{
+                    color: #707070;
+                }
             }
         }
     }

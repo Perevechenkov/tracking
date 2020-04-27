@@ -10,10 +10,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const filename = ext => {
-    let hook = '';
-    if (ext === 'js' || ext === 'css')
-        hook = '?=';
-    return isDev ? `[name].${ext}` : `[name].${ext}${hook}[contenthash]`
+    return isDev ? `[name].${ext}` : `[name].${ext}?=[contenthash]`
 };
 
 module.exports = {
@@ -58,7 +55,7 @@ module.exports = {
     },
     devServer: {
         port: 4000,
-        hot: isDev,
+        hot: isDev
     },
     plugins: [
         new HTMLWebpackPlugin({
