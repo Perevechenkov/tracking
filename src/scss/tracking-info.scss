@@ -12,9 +12,17 @@
         }
     }
 
+    nowrp {
+        white-space: nowrap;
+    }
+
     .general__info {
-        padding: 29px 10px 40px 23px;
+        padding: 29px 23px 40px;
         border-bottom: 1px solid $border;
+
+        .--mobile{
+            display: none;
+        }
 
         &:first-child {
             border-top: none;
@@ -40,7 +48,7 @@
 
         .delivery__info {
             box-sizing: border-box;
-            display: flex;
+            display: flex;          
             width: 100%;
             margin-top: 21px;
             color: #000;
@@ -48,6 +56,7 @@
         }
 
         .delivery__info__extended {
+            margin-left: 5px;
             p {
                 font-size: 16px;
                 font-weight: 400;
@@ -133,7 +142,7 @@
                     }
                 }
 
-                &:first-child{
+                &:first-child {
                     &::after {
                         position: absolute;
                         content: "";
@@ -149,6 +158,7 @@
                     box-sizing: border-box;
                     display: flex;
                     width: 32px;
+                    min-width: 32px;
                     background-color: white;
 
                     img {
@@ -163,15 +173,16 @@
                     flex-direction: column;
                     margin-left: 15px;
 
-                    a{
+                    a {
                         margin: 0;
                         height: min-content;
                         color: $generalHover;
                     }
 
-                    .text_with__date{
+                    .text_with__date {
                         color: $breadcrumbLinkShop;
-                    }
+                    }    
+                                       
                 }
             }
 
@@ -184,10 +195,9 @@
 
                 z-index: 1;
             }
-
         }
 
-        .pickup__status__info{
+        .pickup__status__info {
             display: flex;
             flex-direction: row;
 
@@ -197,6 +207,8 @@
                 box-sizing: border-box;
                 display: flex;
                 width: 32px;
+                min-width: 32px;
+                background-color: white;
 
                 img {
                     width: 100%;
@@ -210,41 +222,69 @@
                 justify-content: center;
                 margin-left: 15px;
 
-                a{
+                a {
                     margin: 0;
                     height: min-content;
                     color: $generalHover;
                 }
 
-                .text_with__date{
-                    color: $breadcrumbLinkShop;
-                }
+                .text_with__date {
+                    color: $breadcrumbLinkShop;                    
+                }  
+                
             }
+        }      
+    }
+
+    .extended__status__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 35px;
+        padding: 35px 10px;
+        background-color: #e5e5e5;
+
+        .img__wrap{
+            display: none;
         }
 
-        .extended__status__block{
-            margin-top: 35px;
-            padding: 35px 10px;
-            background-color: #e5e5e5;
+        h1 {
+            width: 100%;
+            font-size: 1.4em;
+            font-weight: 300;
+            text-align: center;
+            color: #8f8f8f;
+        }
 
-            h1{
-                font-size: 1.4em;
-                font-weight: 300;
-                text-align: center;
-                color: #8f8f8f;
+        p {
+            font-size: 18px;
+
+            margin: 15px 20% 0;
+            text-align: center;
+            color: #8f8f8f;
+
+            a {
+                white-space: nowrap;
+                font-weight: 700;
+                text-decoration: none;
+                color: #707070;
             }
+        }            
+    }
 
-            p{
-                font-size: 18px;
-                width: 450px;
-                margin: 15px auto 0;
-                text-align: center;
-                color: #8f8f8f;
+    .--done {
+        padding-top: 25px;
 
-                b{
-                    color: #707070;
-                }
-            }
+        h1{
+            color: $active;
+        }
+
+        .img__wrap {
+            display: block;
+            width: 74px;
+            margin-right: 0;
+            margin-bottom: 10px;
         }
     }
 }
