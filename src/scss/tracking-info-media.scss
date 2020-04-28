@@ -1,11 +1,23 @@
-@import "_variables";
-
 .content-wrap {
   .content {
     @media (max-width: $large-mobile-max) {
       border-right: none;
       border-left: none;
       margin-top: 0;
+    }
+
+    .general__info{
+      @media (max-width: $large-mobile-max) {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+    }
+
+    .route__info{
+      @media (max-width: $large-mobile-max) {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
     }
 
     .client__info {

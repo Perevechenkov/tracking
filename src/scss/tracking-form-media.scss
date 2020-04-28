@@ -1,14 +1,12 @@
-@import "_variables";
-
 .content-wrap {
   @media (max-width: $large-mobile-max) {
     padding: 0;
   }
 
   .mobile-padding {
-    @media (max-width: $large-mobile-max) {
+    @media (max-width: $large-mobile-max) {    
       width: 100%;
-      padding: 20px;
+      padding: 20px 14px;
     }
 
     .tracking-form-box {
