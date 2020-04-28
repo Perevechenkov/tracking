@@ -1,0 +1,137 @@
+aside {
+    .inner-wrapper-sticky {
+        position: relative;
+
+        #sidebar {
+            box-sizing: border-box;
+            padding-top: 12px;
+            will-change: position, transform;
+
+            .product-nav {
+                display: block;
+
+                ul {
+                    li {
+                        .menu__item {
+                            box-sizing: border-box;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: 100%;
+                            padding: 13px 15px 13px 30px;
+                            font-size: 0.9em;
+                            text-decoration: none;
+                            color: grey;
+
+                            &:hover {
+                                padding-left: 20px;
+                                color: black;
+                                border-left: 10px solid $generalColor;
+                            }
+                        }
+
+                        .submenu-block {
+                            position: absolute;
+                            display: flex;
+                            flex-direction: row;
+                            //visibility: hidden;
+                            left: 100%;
+                            top: 0;
+                            margin-left: 1px;
+                            min-width: 500px;
+                            width: 70vw;
+                            max-height: 70vh;
+                            padding: 30px 20px;
+                            background-color: white;
+                            transition: all 50ms ease-in-out 0.2s;
+
+                            border-right: 1px solid $border;
+                            border-bottom: 1px solid $border;
+
+                            .submenu__inner {
+                                display: flex;
+                                flex-flow: column wrap;
+                                align-items: center;
+                                width: 100%;
+                                //column-count: 2;
+
+                                list-style: none;
+                                border-right: 1px solid $border;
+                                padding: 10px 15px;
+
+                                .submenu__item {                                 
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 45%;
+                                    //break-inside: avoid;
+
+                                    margin-bottom: 15px;
+
+                                    .title {
+                                        margin-bottom: 5px;
+
+                                        font-size: 1.5em;
+                                        font-weight: 700;
+                                        color: black;
+                                        text-decoration: none;
+
+                                        transition: color 0.1s ease-out;
+
+                                        &:hover {
+                                            color: $generalHover;
+                                        }
+                                    }
+
+                                    .item__inner {
+                                        list-style: none;
+
+                                        li {
+                                            margin: 8px 0;
+                                            .device {
+                                                color: black;
+                                                text-decoration: none;
+
+                                                transition: color 0.1s ease-out;
+
+                                                &:hover {
+                                                    color: $generalHover;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .brands-block {
+                                display: flex;
+                                flex-flow: column wrap;
+                                width: 300px;
+                                
+                                padding: 10px 15px;
+
+                                .brand__item {
+                                    box-sizing: border-box;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 50%;
+                                    height: 6vw;
+                                    max-height: 80px;
+                                    padding: 10px;
+
+                                    img{
+                                        height: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover .submenu-block {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}
