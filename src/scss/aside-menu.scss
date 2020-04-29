@@ -12,58 +12,94 @@ aside {
 
                 ul {
                     li {
-                        .menu__item {
-                            box-sizing: border-box;
+                        .menu__item__wrap {
                             display: flex;
                             align-items: center;
-                            justify-content: space-between;
-                            width: 100%;
-                            padding: 13px 15px 13px 30px;
-                            font-size: 0.9em;
-                            text-decoration: none;
-                            color: grey;
-
-                            &:hover {
-                                padding-left: 20px;
+                            justify-content: center;
+                            position: relative;
+                            .menu__item {
+                                box-sizing: border-box;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+    
+                                line-height: 1.5;
+                                width: 100%;
+                                padding: 10px 15px 10px 30px;
+                                font-size: 0.9em;
+                                text-decoration: none;
                                 color: black;
-                                border-left: 10px solid $generalColor;
                             }
+
+                            .arrow-wrap {
+                                visibility: hidden;
+                                width: 25px;
+                                height: 25px;
+                                margin-right: 10px;
+                                .arrow-icon {
+                                    fill: grey;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }                                              
                         }
+
+                        &:hover > .submenu-block{
+                            visibility: visible;
+                        }
+
+                        &:hover .arrow-wrap{
+                            visibility: visible;
+                        }
+
+                        &:hover .menu__item {
+                            padding-left: 20px;
+                            color: black;
+                            border-left: 10px solid $generalColor;
+                        }
+                        
+                     
 
                         .submenu-block {
                             position: absolute;
                             display: flex;
                             flex-direction: row;
-                            //visibility: hidden;
+                            visibility: hidden;
                             left: 100%;
                             top: 0;
+
+                            max-height: 760px;
+                            width: 1600px;
+
                             margin-left: 1px;
-                            min-width: 500px;
-                            width: 70vw;
-                            max-height: 70vh;
-                            padding: 30px 20px;
+                            padding: 20px 0 20px 20px;
                             background-color: white;
                             transition: all 50ms ease-in-out 0.2s;
 
                             border-right: 1px solid $border;
                             border-bottom: 1px solid $border;
 
+                            &:hover {
+                                visibility: visible;
+                            }
+
                             .submenu__inner {
+                                box-sizing: border-box;
                                 display: flex;
                                 flex-flow: column wrap;
-                                align-items: center;
+                                align-content: space-between;
                                 width: 100%;
-                                //column-count: 2;
+                                overflow: hidden;
 
                                 list-style: none;
                                 border-right: 1px solid $border;
                                 padding: 10px 15px;
 
-                                .submenu__item {                                 
+                                .submenu__item {
                                     display: flex;
                                     flex-direction: column;
-                                    width: 45%;
-                                    //break-inside: avoid;
+                                    width: 48%;
+                                    padding-left: 15px;
 
                                     margin-bottom: 15px;
 
@@ -104,31 +140,42 @@ aside {
 
                             .brands-block {
                                 display: flex;
-                                flex-flow: column wrap;
-                                width: 30%;
-                                
+                                flex-flow: row wrap;
+                                justify-content: flex-start;
+                                height: 100%;
+                                width: 40%;
+
                                 padding: 10px 15px;
 
                                 .brand__item {
                                     box-sizing: border-box;
+                                    width: 50%;
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
-                                    width: 50%;
-                                    height: 6vw;
-                                    max-height: 80px;
-                                    padding: 10px;
 
-                                    img{
-                                        height: 100%;
+                                    .brand__wrap {
+                                        box-sizing: border-box;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 100%;
+                                        max-height: 80px;
+
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    transition: box-shadow 0.1s ease-out;
+
+                                    &:hover {
+                                        box-shadow: 0 5px 15px 5px $shadowColor;
+                                        z-index: 1;
                                     }
                                 }
                             }
                         }
-                    }
-
-                    &:hover .submenu-block {
-                        visibility: visible;
                     }
                 }
             }

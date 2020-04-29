@@ -1,0 +1,81 @@
+aside {
+    .inner-wrapper-sticky {
+        #sidebar {
+            .product-nav {
+                ul {
+                    li {
+                        .submenu-block {
+                            @media (min-width: $tablet) and (max-width: $pc-max) {
+                                width: 700px;
+                            }
+
+                            @media (min-width: $pc) and (max-width: $pc-wide-max) {
+                                width: 950px;
+                            }
+
+                            @media (min-width: $pc-wide) and (max-width: $pc4k-max) {
+                                width: 1250px;
+                            }
+
+                            @media (max-height: 720px){
+                                max-height: 500px;
+
+                                .submenu__inner {
+                                    .submenu__item {
+                                        font-size: 0.7em;
+                                    }
+                                }
+                            }
+
+                            @media (min-height: 637px) and (max-height: 752px){
+                                max-height: 440px;
+
+                                .submenu__inner {
+                                    .submenu__item {
+                                        font-size: 0.7em;
+                                    }
+                                }
+                            }
+
+                            @media (min-height: 753px) and (max-height: 824px){
+                                max-height: 510px;
+
+                                .submenu__inner {
+                                    .submenu__item {
+                                        font-size: 0.8em;
+                                    }
+                                }
+                            }
+
+                            @media (min-height: 825px) and (max-height: 912px){
+                                max-height: 580px;
+
+                                .submenu__inner {
+                                    .submenu__item {
+                                        font-size: 0.9em;
+                                    }
+                                }
+                            }
+
+                            @media (min-height: 913px) and (max-height: 968px){
+                                max-height: 640px;
+                            }
+
+                            @media (min-height: 969px) and (max-height: 1023px){
+                                max-height: 720px;
+                            }
+
+                            .brands-block {
+                                .brand__item {
+                                    @media (min-width: $pc-4k) {
+                                        width: 33.33333%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

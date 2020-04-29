@@ -7,11 +7,12 @@
 @import "tracking-form-media";
 @import "tracking-info-media";
 @import "aside-menu";
+@import "aside-menu-media";
 
 header {
   top: 0;
   background-color: $generalBg;
-  height: 200px;
+  height: 175px;
   position: fixed;
   border-bottom: 1px solid $border;
 
@@ -21,7 +22,7 @@ header {
 }
 
 main {
-  margin-top: 200px;
+  margin-top: 175px;
 
   aside {
     width: 21.1%;
