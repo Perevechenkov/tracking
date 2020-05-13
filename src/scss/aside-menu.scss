@@ -1,184 +1,185 @@
 aside {
-    .inner-wrapper-sticky {
-        position: relative;
+  .inner-wrapper-sticky {
+    position: relative;
 
-        #sidebar {
-            box-sizing: border-box;
-            padding-top: 12px;
-            will-change: position, transform;
+    #sidebar {
+      box-sizing: border-box;
+      padding-top: 12px;
+      will-change: position, transform;
 
-            .product-nav {
-                display: block;
+      .product-nav {
+        display: block;
 
-                ul {
-                    li {
-                        .menu__item__wrap {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            position: relative;
-                            .menu__item {
-                                box-sizing: border-box;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-    
-                                line-height: 1.5;
-                                width: 100%;
-                                padding: 10px 15px 10px 30px;
-                                font-size: 0.9em;
-                                text-decoration: none;
-                                color: black;
-                            }
+        ul {
+          li {
+            .menu__item__wrap {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
 
-                            .arrow-wrap {
-                                visibility: hidden;
-                                width: 25px;
-                                height: 25px;
-                                margin-right: 10px;
-                                .arrow-icon {
-                                    fill: grey;
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }                                              
-                        }
+              .menu__item {
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
 
-                        &:hover > .submenu-block{
-                            visibility: visible;
-                        }
+                line-height: 1.5;
+                width: 100%;
+                padding: 10px 15px 10px 30px;
+                font-size: 0.9em;
+                text-decoration: none;
+                color: black;
+              }
 
-                        &:hover .arrow-wrap{
-                            visibility: visible;
-                        }
+              .arrow-wrap {
+                visibility: hidden;
+                width: 25px;
+                height: 25px;
+                margin-right: 10px;
 
-                        &:hover .menu__item {
-                            padding-left: 20px;
-                            color: black;
-                            border-left: 10px solid $generalColor;
-                        }
-                        
-                     
-
-                        .submenu-block {
-                            position: absolute;
-                            display: flex;
-                            flex-direction: row;
-                            visibility: hidden;
-                            left: 100%;
-                            top: 0;
-
-                            max-height: 760px;
-                            width: 1600px;
-
-                            margin-left: 1px;
-                            padding: 20px 0 20px 20px;
-                            background-color: white;
-                            transition: all 50ms ease-in-out 0.2s;
-
-                            border-right: 1px solid $border;
-                            border-bottom: 1px solid $border;
-
-                            &:hover {
-                                visibility: visible;
-                            }
-
-                            .submenu__inner {
-                                box-sizing: border-box;
-                                display: flex;
-                                flex-flow: column wrap;
-                                align-content: space-between;
-                                width: 100%;
-                                overflow: hidden;
-
-                                list-style: none;
-                                border-right: 1px solid $border;
-                                padding: 10px 15px;
-
-                                .submenu__item {
-                                    display: flex;
-                                    flex-direction: column;
-                                    width: 48%;
-                                    padding-left: 15px;
-
-                                    margin-bottom: 15px;
-
-                                    .title {
-                                        margin-bottom: 5px;
-
-                                        font-size: 1.5em;
-                                        font-weight: 700;
-                                        color: black;
-                                        text-decoration: none;
-
-                                        transition: color 0.1s ease-out;
-
-                                        &:hover {
-                                            color: $generalHover;
-                                        }
-                                    }
-
-                                    .item__inner {
-                                        list-style: none;
-
-                                        li {
-                                            margin: 8px 0;
-                                            .device {
-                                                color: black;
-                                                text-decoration: none;
-
-                                                transition: color 0.1s ease-out;
-
-                                                &:hover {
-                                                    color: $generalHover;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            .brands-block {
-                                display: flex;
-                                flex-flow: row wrap;
-                                justify-content: flex-start;
-                                height: 100%;
-                                width: 40%;
-
-                                padding: 10px 15px;
-
-                                .brand__item {
-                                    box-sizing: border-box;
-                                    width: 50%;
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-
-                                    .brand__wrap {
-                                        box-sizing: border-box;
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                        width: 100%;
-                                        max-height: 80px;
-
-                                        img {
-                                            width: 100%;
-                                        }
-                                    }
-
-                                    transition: box-shadow 0.1s ease-out;
-
-                                    &:hover {
-                                        box-shadow: 0 5px 15px 5px $shadowColor;
-                                        z-index: 1;
-                                    }
-                                }
-                            }
-                        }
-                    }
+                .arrow-icon {
+                  fill: grey;
+                  width: 100%;
+                  height: 100%;
                 }
+              }
             }
+
+            &:hover > .submenu-block {
+              visibility: visible;
+            }
+
+            &:hover .arrow-wrap {
+              visibility: visible;
+            }
+
+            &:hover .menu__item {
+              padding-left: 20px;
+              color: black;
+              border-left: 10px solid $generalColor;
+            }
+
+            .submenu-block {
+              position: absolute;
+              display: flex;
+              flex-direction: row;
+              visibility: hidden;
+              left: 100%;
+              top: 0;
+
+              height: 760px;
+              width: 1600px;
+
+              margin-left: 1px;
+              padding: 20px 0 20px 20px;
+              background-color: white;
+              transition: all 50ms ease-in-out 0.2s;
+
+              border-right: 1px solid $border;
+              border-bottom: 1px solid $border;
+
+              &:hover {
+                visibility: visible;
+              }
+
+              .submenu__inner {
+                box-sizing: border-box;
+                display: flex;
+                flex-flow: column wrap;
+                align-content: space-between;
+                width: 100%;
+                overflow: hidden;
+
+                list-style: none;
+                border-right: 1px solid $border;
+                padding: 10px 15px;
+
+                .submenu__item {
+                  display: flex;
+                  flex-direction: column;
+                  width: 48%;
+                  padding-left: 15px;
+
+                  margin-bottom: 15px;
+
+                  .title {
+                    margin-bottom: 5px;
+
+                    font-size:1.1em;
+                    font-weight: 700;
+                    color: black;
+                    text-decoration: none;
+
+                    transition: color 0.1s ease-out;
+
+                    &:hover {
+                      color: $generalHover;
+                    }
+                  }
+
+                  .item__inner {
+                    list-style: none;
+
+                    li {
+                      margin: 8px 0;
+
+                      .device {
+                        color: black;
+                        text-decoration: none;
+
+                        transition: color 0.1s ease-out;
+
+                        &:hover {
+                          color: $generalHover;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .brands-block {
+                align-content: start;
+                display: flex;
+                flex-flow: row wrap;
+                height: 100%;
+                width: 40%;
+
+                padding: 10px 15px;
+
+                .brand__item {
+                  box-sizing: border-box;
+                  width: 50%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  .brand__wrap {
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    max-height: 80px;
+
+                    img {
+                      width: 100%;
+                    }
+                  }
+
+                  transition: box-shadow 0.1s ease-out;
+
+                  &:hover {
+                    box-shadow: 0 5px 15px 5px $shadowColor;
+                    z-index: 1;
+                  }
+                }
+              }
+            }
+          }
         }
+      }
     }
+  }
 }
